@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     background: url(https://img.freepik.com/premium-vector/abstract-seamless-pattern-background-with-artistic-style_7505-1600.jpg?w=2000);
     text-align: center;
@@ -11,33 +12,114 @@ body {
 
 h1 {
     font-size: 50px;
-    margin-top: 30px;   
+    margin-top: 30px;
+}
+
+
+p {
+    margin: 5px 0px;
 }
 
 button {
-    margin-top: 2px;
-    padding: 5px 20px;
+    outline: 1px solid black;
 }
 
-#extraContainer {
+#size {
+    font-weight: bold;
+    padding: 10px 10px;
+    color: white;
+    background-color: darkgrey;
+    border-style: none;
+    border-radius: 5px;
+    margin: 5px 0px;
+
+}
+
+#size:hover {
+    background-color: lightgrey;
+    transition: 0.5s;
+}
+
+#shake {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 40px;
+    color: white;
+    background-color: darkgrey;
+    border-style: none;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+#shake:hover {
+    background-color: lightgrey;
+    transition: 0.5s;
+}
+
+#black {
+    font-weight: bold;
+    padding: 10px 10px;
+    color: white;
+    background-color: darkgrey;
+    border-style: none;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+#black:hover {
+    background-color: lightgrey;
+    transition: 0.5s;
+}
+
+#random {
+    font-weight: bold;
+    padding: 10px 10px;
+    color: white;
+    background-color: darkgrey;
+    border-style: none;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+#random:hover {
+    background-color: lightgrey;
+    transition: 0.5s;
+}
+
+#erase {
+    font-weight: bold;
+    padding: 10px 10px;
+    color: white;
+    background-color: darkgrey;
+    border-style: none;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+#erase:hover {
+    background-color: lightgrey;
+    transition: 0.5s;
+}
+
+#outerContainer {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#container {
+
+#colorBtns {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+#innerContainer {
+    width: 960px;
+    height: 960px;
+    display: grid;
+    grid-template-columns: repeat(16, auto);
     border: 50px solid red;
-    border-radius: 7px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    max-width: 784px;
-    min-width: 784px;
-    max-height: 640px;
-    background-color: rgb(235, 235, 235);
-}
-
-.box {
-    min-height: 9px;
-    min-width: 9px;
+    border-radius: 10px;
+    outline: 1px solid black;
+    background-color: rgb(240, 240, 240);
 }
