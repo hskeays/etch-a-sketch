@@ -1,6 +1,26 @@
 createGrid(16);
 let color = "black";
 
+let blackBtn = document.querySelector("#black");
+blackBtn.addEventListener("click", function () {
+    setColor('black');
+});
+
+let randomBtn = document.querySelector("#random");
+randomBtn.addEventListener("click", function () {
+    setColor('random');
+});
+
+let eraserBtn = document.querySelector("#erase");
+eraserBtn.addEventListener("click", function () {
+    setColor('erase');
+});
+
+let shakeBtn = document.querySelector("#shake");
+shakeBtn.addEventListener("click", function () {
+    resetGrid();
+});
+
 let chooseSize = document.querySelector("#size");
 chooseSize.addEventListener("click", function () {
     let size = getUserSize();
@@ -8,7 +28,7 @@ chooseSize.addEventListener("click", function () {
 });
 
 function getUserSize() {
-    shakeGrid();
+    resetGrid();
     let input = +prompt("Choose a grid size between 2 and 100: ");
     if (input == "") {
         alert("Please choose a number between 2 and 100")
@@ -23,12 +43,11 @@ function getUserSize() {
 
 function createGrid(size) {
     let grid = document.querySelector("#innerContainer");
-
+    let gridCount = size * size;
+    
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
-
-    let gridCount = size * size;
-
+    
     for (i = 0; i < gridCount; i++) {
         let gridSquare = document.createElement("div");
         gridSquare.classList.add("squares")
@@ -51,7 +70,7 @@ function setColor(colorChoice) {
     color = colorChoice
 }
 
-function shakeGrid() {
+function resetGrid() {
     let squares = document.querySelectorAll(".squares");
     squares.forEach(squares => squares.style.backgroundColor = "rgb(240, 240, 240)")
 }
