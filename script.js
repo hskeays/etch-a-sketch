@@ -34,13 +34,13 @@ chooseSize.addEventListener("click", function () {
 
 function getUserSize() {
     resetGrid();
-    let input = +prompt("Choose a number between 1 and 100: ");
+    let input = +prompt("Choose a number between 1 and 75: ");
     if (input == "") {
-        alert("Choose a number between 1 and 100: ")
-    } else if (input < 1 || input > 100) {
-        alert("Choose a number between 1 and 100: ")
+        alert("Choose a number between 1 and 75: ")
+    } else if (input < 1 || input > 75) {
+        alert("Choose a number between 1 and 75: ")
     } else if (isNaN(input)) {
-        alert("Choose a number between 1 and 100: ")
+        alert("Choose a number between 1 and 75: ")
     } else {
         return input;
     }
