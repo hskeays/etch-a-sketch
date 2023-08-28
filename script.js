@@ -34,21 +34,20 @@ chooseSize.addEventListener("click", function () {
 
 function getUserSize() {
     resetGrid();
-    let input = +prompt(`Choose a number between 1 and 100.
-The larger the number the smaller the pen! `);
+    let input = +prompt("Choose a number between 1 and 100: ");
     if (input == "") {
-        alert("Please choose a number between 2 and 100")
+        alert("Choose a number between 1 and 100: ")
     } else if (input < 1 || input > 100) {
-        alert("Please choose a number between 2 and 100")
+        alert("Choose a number between 1 and 100: ")
     } else if (isNaN(input)) {
-        alert("Please choose a number between 2 and 100")
+        alert("Choose a number between 1 and 100: ")
     } else {
         return input;
     }
 }
 
 function createGrid(size) {
-    let grid = document.querySelector("#innerContainer");
+    let grid = document.querySelector(".gridContainer");
     let gridCount = size * size;
 
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;

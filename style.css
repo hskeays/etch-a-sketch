@@ -8,22 +8,34 @@ body {
     background: url(https://img.freepik.com/premium-vector/abstract-seamless-pattern-background-with-artistic-style_7505-1600.jpg?w=2000);
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
-    font-size: 60px;
-    margin-top: 30px;
+    font-size: 70px;
 }
-
 
 p {
     margin: 5px 0px;
 }
 
 button {
-    outline: 1px solid black;
+    outline: 1px solid rgb(53, 53, 53);
 }
 
+img {
+    height: 60px;
+    width: auto;
+}
+
+img:hover {
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+/* BUTTONS */
 #size {
     font-weight: bold;
     padding: 10px 10px;
@@ -32,10 +44,12 @@ button {
     border-style: none;
     border-radius: 5px;
     margin: 5px 0px;
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/003/604/064/small/surface-space-blank-white-color-background-with-black-grid-space-line-color-surfaces-cyber-technology-banners-covers-terrain-sci-fi-frames-and-related-background-vector.jpg);
+    background-size: contain;
 }
 
 #size:hover {
-    background-color: rgb(243, 243, 243);
+    opacity: 0.7;
     transition: 0.2s;
 }
 
@@ -50,8 +64,8 @@ button {
 }
 
 #black:hover {
-    background-color: rgb(68, 68, 68);
-    transition: 0.5s;
+    opacity: 0.7;
+    transition: 0.2s;
 }
 
 #grayscale {
@@ -65,8 +79,8 @@ button {
 }
 
 #grayscale:hover {
-    background-color: lightgrey;
-    transition: 0.5s;
+    opacity: 0.7;
+    transition: 0.2s;
 }
 
 #random {
@@ -82,7 +96,7 @@ button {
 
 #random:hover {
     opacity: 0.7;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 #erase {
@@ -96,8 +110,8 @@ button {
 }
 
 #erase:hover {
-    background-color: palevioletred;
-    transition: 0.5s;
+    opacity: 0.7;
+    transition: 0.2s;
 }
 
 #shake {
@@ -112,17 +126,18 @@ button {
 }
 
 #shake:hover {
-    background-color: darkred;
-    transition: 0.5s;
+    opacity: 0.6;
+    transition: 0.2s;
 }
 
-#outerContainer {
+/* CONTAINERS */
+.header {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-bottom: auto;
 }
 
-#colorBtns {
+.colorBtnsContainer {
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
@@ -130,13 +145,28 @@ button {
 
 }
 
-#innerContainer {
+.etchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridContainer {
     width: 960px;
-    height: 960px;
+    min-height: 960px;
     display: grid;
     grid-template-columns: repeat(16, auto);
     border: 50px solid red;
     border-radius: 10px;
     outline: 2px solid black;
     background-color: rgb(240, 240, 240);
+    flex: 0, 1, auto;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: auto;
 }
