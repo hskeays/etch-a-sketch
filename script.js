@@ -1,10 +1,11 @@
 createGrid(16);
 let color = "black";
+function setDefaultColor(newColor) {
+    color = newColor;
+}
 
-let blackBtn = document.querySelector("#black");
-blackBtn.addEventListener("click", function () {
-    setColor('black');
-});
+let colorPicker = document.querySelector('#colorPicker');
+colorPicker.oninput = (e) => setDefaultColor(e.target.value);
 
 let grayscaleBtn = document.querySelector("#grayscale");
 grayscaleBtn.addEventListener("click", function () {
@@ -79,7 +80,7 @@ function colorSquares() {
         }
     } else {
         this.style.opacity = 1;
-        this.style.backgroundColor = "black";
+        this.style.backgroundColor = color;
     }
 }
 
