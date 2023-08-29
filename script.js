@@ -80,7 +80,7 @@ function colorSquares(e) {
             this.style.opacity = 1;
         }
     } else if (color == "erase") {
-        this.style.backgroundColor = "rgb(240, 240, 240)"
+        this.style.backgroundColor = "rgb(250, 250, 250)"
         this.style.opacity = 0.1;
     } else if (color == "grayscale") {
         this.style.backgroundColor = "rgb(0, 0, 0)"
@@ -97,6 +97,6 @@ function colorSquares(e) {
 
 function resetGrid() {
     let squares = document.querySelectorAll(".squares");
-    squares.forEach(squares => squares.style.backgroundColor = "rgb(240, 240, 240)");
+    squares.forEach(squares => squares.style.backgroundColor = "rgb(250, 250, 250)");
     squares.forEach(squares => squares.style.opacity = 0.1);
 }
